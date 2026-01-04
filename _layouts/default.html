@@ -72,7 +72,13 @@
   </main>
 
   <footer>
-    <p>&copy; {{ site.time | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+    <p>&copy; {{ site.time | date: "%Y" }} {{ site.author }}. All rights reserved.</p>
+    <p>
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" style="color: #007bff; text-decoration: none;">GitHub</a>
+      {% if site.email %}
+      | <a href="mailto:{{ site.email }}" style="color: #007bff; text-decoration: none;">Email</a>
+      {% endif %}
+    </p>
   </footer>
 </body>
 </html>
