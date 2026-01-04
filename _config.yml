@@ -1,11 +1,16 @@
 # Site settings
-title: My Blog
-description: A simple Jekyll blog
+title: Nilesh's Tech Blog
+description: Senior Tech Leader sharing insights on FinTech, Cloud Architecture, Microservices, and Event-driven systems. 20+ years of experience with Java, Kotlin, Spring, Python, and Javascript.
+author: Nilesh Dabholkar
+email: ndabholkar@inspiredideas.net
+location: London
+github_username: ndabholkar
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+theme: minima
 permalink: /:year/:month/:day/:title/
 
 # Plugins
