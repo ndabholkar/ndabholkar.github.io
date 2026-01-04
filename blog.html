@@ -1,0 +1,75 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<style>
+  .blog-header {
+    margin-bottom: 40px;
+  }
+  .blog-header h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  .blog-posts {
+    list-style: none;
+  }
+  .blog-posts li {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #eee;
+  }
+  .blog-posts li:last-child {
+    border-bottom: none;
+  }
+  .blog-post-date {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  .blog-posts h2 {
+    margin-bottom: 10px;
+  }
+  .blog-posts h2 a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  .blog-posts h2 a:hover {
+    text-decoration: underline;
+  }
+  .blog-post-excerpt {
+    color: #555;
+    line-height: 1.6;
+  }
+  .blog-read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .blog-read-more:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="blog-header">
+  <h1>Blog</h1>
+  <p>All posts, newest first</p>
+</div>
+
+{% if site.posts.size > 0 %}
+  <ul class="blog-posts">
+    {% for post in site.posts %}
+      <li>
+        <div class="blog-post-date">{{ post.date | date: "%B %d, %Y" }}</div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <div class="blog-post-excerpt">
+          {{ post.excerpt }}
+          <a href="{{ post.url | relative_url }}" class="blog-read-more">Read more →</a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No posts yet. Check back soon!</p>
+{% endif %}
